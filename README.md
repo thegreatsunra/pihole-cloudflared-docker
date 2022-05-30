@@ -36,6 +36,20 @@ TODO: Configure this internal network via `docker-compose.yml`
 docker-compose -p pihole up -d
 ```
 
+3. Change the Pi-hole admin console password:
+
+```shell
+sudo docker exec -it pihole pihole -a -p
+```
+
+## Maintenance
+
+Update Pi-hole Gravity
+
+```shell
+sudo docker exec -it pihole pihole -g
+```
+
 ## License
 
 MIT
