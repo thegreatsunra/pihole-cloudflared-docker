@@ -1,2 +1,15 @@
 version: "3.8"
 
+
+networks:
+  # Create the internal network
+  internal:
+    ipam:
+      config:
+        ## subnet of the internal network
+        - subnet: ${INTERNAL_SUBNET}
+
+  # The priv_lan network is already set up, so it is an 'external' network
+  priv_lan:
+    external:
+      name: priv_lan
